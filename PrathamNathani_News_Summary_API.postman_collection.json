@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "fd44817d-6ad8-4ac1-ac6a-37f947244fa4",
+		"name": "PrathamNathani_News_Summary_API",
+		"description": "Postman collection to test all APIs of Django News Summary project.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46729276",
+		"_collection_link": "https://pratham-1453026.postman.co/workspace/Pratham's-Workspace~03172140-8e01-410b-8c45-78b64c545496/collection/46729276-fd44817d-6ad8-4ac1-ac6a-37f947244fa4?action=share&source=collection_link&creator=46729276"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"testuser\", \"password\": \"testpass123\"}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"testuser\", \"password\": \"testpass123\"}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Latest Summarized News",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer YOUR_ACCESS_TOKEN"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/news/latest/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"news",
+						"latest",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Summarized News",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer YOUR_ACCESS_TOKEN"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/news/search/?q=tesla",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"news",
+						"search",
+						""
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "tesla"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Article",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer YOUR_ACCESS_TOKEN"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\": \"Some title\", \"url\": \"https://example.com\", \"summary\": \"Some summary\"}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/news/save/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"news",
+						"save",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Saved Articles",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer YOUR_ACCESS_TOKEN"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/news/saved/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"news",
+						"saved",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
